@@ -1,0 +1,258 @@
+CBT DOCX TO EXCEL CONVERTER
+PANDUAN INSTALASI LINUX & WINDOWS
+====================================
+
+Repository:
+https://github.com/madtpptiktok-dev/cbt-docx-to-excel
+
+
+====================================
+A. INSTALASI DI LINUX MINT / UBUNTU
+====================================
+
+1. Install kebutuhan sistem
+
+Buka Terminal lalu jalankan:
+
+sudo apt update
+sudo apt install -y git python3 python3-pip python3-venv python3-tk zenity
+
+
+2. Clone repository
+
+git clone https://github.com/madtpptiktok-dev/cbt-docx-to-excel.git
+
+
+3. Masuk ke folder project
+
+cd cbt-docx-to-excel
+
+
+4. Jalankan installer otomatis
+
+chmod +x install.sh run.sh
+./install.sh
+
+
+5. Jalankan aplikasi
+
+./run.sh
+
+
+Jika berhasil, GUI CBT DOCX to Excel Converter akan terbuka.
+
+
+------------------------------------
+CARA MENJALANKAN LAGI DI LINUX
+------------------------------------
+
+Setelah aplikasi pernah di-install, tidak perlu menjalankan install.sh lagi.
+
+Cukup:
+
+cd ~/cbt-docx-to-excel
+./run.sh
+
+
+------------------------------------
+JIKA MUNCUL "PERMISSION DENIED"
+------------------------------------
+
+Jalankan:
+
+chmod +x install.sh run.sh
+
+Kemudian ulangi:
+
+./install.sh
+
+
+------------------------------------
+JIKA OPENPYXL / PYTHON-DOCX TIDAK DITEMUKAN
+------------------------------------
+
+Aktifkan virtual environment:
+
+source .venv/bin/activate
+
+Lalu:
+
+pip install -r requirements.txt
+
+Kemudian:
+
+./run.sh
+
+
+====================================
+B. INSTALASI DI WINDOWS 10 / 11
+====================================
+
+1. Install Python
+
+Download Python 3 dari:
+https://www.python.org/downloads/
+
+PENTING:
+Saat installer Python muncul, centang:
+
+[✓] Add Python to PATH
+
+Kemudian lanjutkan instalasi sampai selesai.
+
+
+2. Install Git
+
+Download Git dari:
+https://git-scm.com/download/win
+
+Install dengan pengaturan default.
+
+
+3. Clone repository
+
+Buka Command Prompt atau PowerShell.
+
+Jalankan:
+
+git clone https://github.com/madtpptiktok-dev/cbt-docx-to-excel.git
+
+
+4. Masuk ke folder project
+
+cd cbt-docx-to-excel
+
+
+5. Jalankan installer Windows
+
+Jika repository sudah memiliki install.bat, jalankan:
+
+install.bat
+
+Atau double-click file:
+
+install.bat
+
+
+6. Jalankan aplikasi
+
+Jalankan:
+
+run.bat
+
+Atau double-click:
+
+run.bat
+
+
+------------------------------------
+JIKA INSTALL.BAT BELUM TERSEDIA
+------------------------------------
+
+Buka Command Prompt di folder project lalu jalankan:
+
+python -m venv .venv
+
+Aktifkan virtual environment:
+
+.venv\Scripts\activate
+
+Install dependency:
+
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+Jalankan aplikasi:
+
+python cbt_docx_to_excel_tool.py
+
+
+------------------------------------
+CARA MENJALANKAN LAGI DI WINDOWS
+------------------------------------
+
+Jika sudah pernah di-install:
+
+1. Buka folder cbt-docx-to-excel
+2. Double-click run.bat
+
+Atau lewat Command Prompt:
+
+cd cbt-docx-to-excel
+run.bat
+
+
+====================================
+C. REQUIREMENTS PYTHON
+====================================
+
+Dependency utama:
+
+python-docx
+openpyxl
+
+File requirements.txt harus berisi:
+
+python-docx
+openpyxl
+
+
+====================================
+D. STRUKTUR FILE REPOSITORY
+====================================
+
+cbt-docx-to-excel/
+|
+|-- cbt_docx_to_excel_tool.py
+|-- requirements.txt
+|-- install.sh
+|-- run.sh
+|-- install.bat
+|-- run.bat
+|-- README.md
+`-- .gitignore
+
+
+====================================
+E. CARA PAKAI APLIKASI
+====================================
+
+1. Jalankan aplikasi.
+2. Klik "Pilih File" pada bagian DOCX.
+3. Pilih file soal Word (.docx).
+4. Klik "Pilih File" pada bagian Template XLSX.
+5. Pilih template CBT (.xlsx).
+6. Tentukan nama output.
+7. Klik "PROSES & VALIDASI".
+8. Tunggu sampai proses selesai.
+
+Hasil yang ideal:
+
+Soal sumber : sesuai jumlah soal
+Soal Excel  : sesuai jumlah soal
+Kunci       : sesuai jumlah soal
+Error       : 0
+Warning     : 0
+Mismatch    : 0
+
+Jika muncul:
+
+PASS: DOCX -> parser -> Excel cocok.
+
+berarti proses konversi berhasil.
+
+
+====================================
+F. CATATAN
+====================================
+
+- Jangan upload file soal .docx dan hasil .xlsx ke GitHub jika berisi data ujian.
+- Folder .venv tidak perlu di-upload ke GitHub.
+- Gunakan file .gitignore untuk mengabaikan file sementara.
+- Linux menggunakan install.sh dan run.sh.
+- Windows menggunakan install.bat dan run.bat.
+- Jika repository Private, pengguna lain harus memiliki akses GitHub untuk clone repository.
+
+====================================
+SELESAI
+====================================
